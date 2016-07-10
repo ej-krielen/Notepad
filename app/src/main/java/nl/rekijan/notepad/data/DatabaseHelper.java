@@ -4,7 +4,12 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import static nl.rekijan.notepad.utilities.Constants.*;
+import static nl.rekijan.notepad.utilities.Constants.COLUMN_CONTENT;
+import static nl.rekijan.notepad.utilities.Constants.COLUMN_CREATED_TIME;
+import static nl.rekijan.notepad.utilities.Constants.COLUMN_ID;
+import static nl.rekijan.notepad.utilities.Constants.COLUMN_MODIFIED_TIME;
+import static nl.rekijan.notepad.utilities.Constants.COLUMN_TITLE;
+import static nl.rekijan.notepad.utilities.Constants.NOTES_TABLE;
 
 /**
  * Helper class for the database
@@ -17,10 +22,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "simple_note_app.db";
     private static final int DATABASE_VERSION = 1;
 
-
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-
     }
 
     @Override
@@ -41,5 +44,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + COLUMN_TITLE + " text not null, "
             + COLUMN_CONTENT + " text not null, "
             + COLUMN_MODIFIED_TIME + " integer not null, "
-            + COLUMN_CREATED_TIME + " integer not null" + ")";
+            + COLUMN_CREATED_TIME + " integer not null " + ")";
 }

@@ -14,6 +14,7 @@ import android.widget.EditText;
  * @since 10-7-2016
  */
 public class LinedEditText extends EditText {
+
     private Rect rect;
     private Paint paint;
 
